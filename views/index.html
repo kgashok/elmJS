@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> CSE_Knowledge Bot!</title>
+    <title> JS-Elm Q&A Bot!</title>
     <meta name="description" content="A cool thing made with HyperDev">
     <link id="favicon" rel="icon" href="http://bit.ly/geniusIcon" type="image/x-icon">
     <meta charset="utf-8">
@@ -66,7 +66,7 @@
         <ul id="questions">
         </ul>
       </section>
-      <hr color ="black"> 
+      <hr class ="style8"> 
       <div id="QnaElm"></div>
     </main>
 
@@ -91,10 +91,17 @@
     <script src="/fbg.js"></script>
     <script> 
       var node = document.getElementById('QnaElm'); 
-      var app  = Elm.Qna.embed(node); 
+      try {
+          var app  = Elm.Qna.embed(node);   
+      }
+      catch (err) { 
+        var errStr = " // Possible error: Elm.Qna missing; rawgit file not accessible!";
+        console.log (errStr);
+        $('<li></li>').text(err + "\n" + errStr).appendTo(node);
+        //$('<li></li>').text(errStr).appendTo(node);
+      }
     </script>
     
-  
-
+    
   </body>
 </html>

@@ -24,3 +24,7 @@ The usual. `client.js` has most of the skunk works.
 - http://stackoverflow.com/questions/38008042/returned-unirest-response-in-node-js-is-undefined
 - http://textsummarization.net/text-summarization-api-for-nodejs
 - https://gomix.com/#!/project/therapeutic-cattle (the 12th exercise of the Node.js tutorial)
+
+## Pure JS version 
+
+Also take a look at http://j.mp/questionsKG

@@ -78,7 +78,7 @@ app.post("/questions", function (request, response) {
   
   getAnswer(request.query, function (resp) {
     console.log(resp.request.path, resp.request.body); 
-    console.log(resp.body.answer);
+    console.log(resp.body);
     console.log("confidence: " + resp.body.score);
     request.query.question += ":("+ resp.body.score +"%) " + resp.body.answer
     questions.unshift(request.query.question);
